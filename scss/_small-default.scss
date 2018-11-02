@@ -1,0 +1,272 @@
+/* Prevent adjustments of font size after orientation cahanges in IE on windows, phone and in ios.*/
+html{
+    -webkit-text-size-adjust:100%;
+    -ms-text-size-adjust:100%;
+}
+
+/* Apply a natural box layout model to all elements */
+*{
+    -webkit-box-sizing:border-box;
+    -moz-box-sizing:border-box;
+    box-sizing: border-box; 
+}
+
+/*---------------BODY-----------*/
+body{
+    font-family: $defaultFont;
+    font-weight: $normalWeight;
+}
+// END OF BODY
+
+/*---------------HEADER-----------*/
+header{
+    background-color: $primaryColor;
+    color: $secondaryColor;
+    padding: 1rem $gutter;
+    
+    
+    form {float:right;}
+    form input {
+        width: 8rem;
+        border-radius: 10px;
+        margin-right:2%;
+        padding: .2rem;
+        border: none;    
+        transition: width .5s;
+    }
+    form input:focus{width:10rem;}
+    a{
+        text-decoration: none;
+    }
+    a h1{
+        font-size: 2rem;
+        font-weight: $normalWeight;
+        color: $secondaryColor;
+    }
+    a h2{
+        font-size: 1.15rem;
+        font-weight: $normalWeight;
+        color: $secondaryColor;
+    }
+}// END OF HEADER
+
+/*---------------NAVIGATION-----------*/
+nav{
+    
+    background-color: $secondaryColor;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+    
+    ul{
+        padding: 1rem 0;
+    }
+    ul li{
+        margin: 0 $gutter;
+        float: left;
+        width: 46%;
+        
+    }
+    
+    ul li a{
+        display: block;
+        text-align: center;
+        font-weight: $boldWeight;
+        font-size: 1.2rem;
+        padding: .5rem 0;
+        color: darken($primaryColor, 20%);
+        text-decoration: none;
+        background-color: darken($secondaryColor, 10%);
+            //rgba(0,0,0,0.15);
+        margin: .2rem 0;
+        border-radius: 1rem;
+        //box-shadow: 1px 1px 4px #000;
+        transition: background 0.7s ease, color 0.7s ease;
+    }
+    ul li.active a{
+        background-color: darken($secondaryColor, 20%);
+    }
+    ul li a:hover{
+        color: $secondaryColor;
+        background-color: $primaryColor;
+    }
+    //DROPDOWN
+   
+    .dropdown{
+        float: left;
+        overflow: hidden;
+        //background: $secondaryColor;
+    }
+    
+    
+    
+}// END OF NAVIGATION
+
+/*---------------MAIN-----------*/
+
+/*INDEX*/
+main{
+    div.mySlider{
+        height: auto;
+    }
+    div.mySlider div{
+        width: 100%;
+    }
+    div.mySlider div img{
+        width: 100%;
+    }
+    
+    h1{
+        font-size: 2rem;
+        margin: 1rem 0 0 $gutter;
+        color: $primaryColor;
+    }
+    h2{
+        font-size: 1.75rem;
+        color: $primaryColor; 
+        font-weight: $boldWeight;
+        margin: 0 $gutter;
+    }
+    hr.fadeAway{
+        background: linear-gradient(to right, rgba(211,45,237,1) 0%,rgba(211,45,237,0.99) 1%,rgba(211,45,237,0.01) 100%); 
+        height: 2px;
+        border: none;
+        margin: 0 $gutter;
+    }
+    
+    div.aboutText{
+        margin: 1.5rem $gutter;
+    }
+    div.aboutText p{
+        margin: 1.5rem 0;
+        font-size: 1.5rem;
+        text-align: center;
+        font-family: cursive;
+        color: $fontColor;
+        line-height: normal;
+    }
+    
+    figure.photo{
+        width: 100% - $gutterDouble;
+        margin: .5rem $gutter;
+    }
+    figure.photo a{
+        text-decoration: none;
+    }
+    
+    figure.photo img{
+        width: 100%;
+    }
+    
+    figure.photo img:hover{
+        box-shadow: 0 0 10px #000000;
+    }
+    figure.photo figcaption{
+        text-align: center;
+        color: $primaryColor;
+        padding-top: .5rem;
+        font-weight: $boldWeight;
+    }
+    figure.photo figcaption:hover{
+        color: darken($secondaryColor, 10%);
+    }
+    
+    /*END OF INDEX*/
+    
+    /*RECIPES*/
+    article, ol li{
+        margin: .5rem $gutter;
+    }
+
+    figure.photo-pd, figure.photo-pd img{
+        width: 100%;
+    }
+    p.aboutRecipe{
+        margin: $gutter;
+        color: $fontColor;
+        font-size: 1.25rem;
+        font-family: cursive;
+        line-height: normal;
+    }
+    article.multiColumn ol{
+        margin: .5rem $gutter;
+    }
+    article.multiColumn ol li{
+        
+        color: $fontColor;
+        font-size: 1rem;
+        font-weight: $normalWeight;
+       
+        padding: $gutter;
+    }
+     /*END OF RECIPES
+    
+     /*CONTACT*/
+    form.contactForm{
+        height: 100%;
+        margin: 1rem $gutter;
+        background-color: $secondaryColor;
+        color: $primaryColor;
+        padding: $gutter;
+        text-align: center;
+        label{
+            font-size: 1rem;
+            font-weight: $boldWeight;
+        }
+        input[type=text], input[type=email], select, textarea{
+            width: 100%; 
+            padding: .75rem; 
+            border: 1px solid $secondaryColor;
+            border-radius: .25rem;
+            box-sizing: border-box;
+            margin-top: .5rem; 
+            margin-bottom: 1rem; 
+            //resize: vertical;/* Allow the user to vertically resize the textarea (not horizontally) */
+        }
+        textarea{
+            min-height: 30%;
+        }
+        input[type=submit] {
+            background-color: $primaryColor;
+            color: $secondaryColor;
+            padding:1rem 2rem;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        input[type=submit]:hover{
+            background-color: darken($secondaryColor, 20%);
+            color: white;
+        }
+    }
+    
+    /*END OF CONTACT*/
+}
+
+/*---------------FOOTER-----------*/
+footer{
+    width: 100%;
+    background-color: $primaryColor;
+    
+    p{
+        text-align: center;
+        color: $secondaryColor;
+        padding: .5rem;
+        font-size: .9rem;
+    }
+    p a{
+        color: $secondaryColor;
+        text-decoration: none;
+    }
+}// END OF FOOTER
+
+
+
+/*----CLEARFIX: Force an element not to collapse*/
+.clearfix::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+
+
+

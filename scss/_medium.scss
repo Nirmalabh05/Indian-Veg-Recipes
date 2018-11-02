@@ -1,0 +1,63 @@
+/*-----------NAVIGATION------------*/
+nav ul{
+    padding: 0;
+    margin-left: $gutter;
+    border-left: 1px solid rgba(0, 0, 0, 0.3);
+}
+nav ul li{
+    width: auto;
+    margin: 0;
+}
+nav ul li a{
+    /* remove phone effects */
+    margin: 0;
+    background-color: transparent;
+    border-radius: 0;
+    box-shadow: 0 0 0;
+    
+    /* add tablet effects */
+    padding: 0.5rem 1.5rem;
+    font-size: 1rem;
+    border-right: 1px solid rgba(0, 0, 0, 0.3);
+}
+/*-----------MAIN------------*/
+/*INDEX*/
+main{
+    figure.photo{
+        width: 50% - $gutterDouble;
+        float: left;
+    }
+    figure.photo img{
+        height: 30rem;
+    }//END OF INDEX 
+    
+    
+    /*RECIPES*/
+    // max-width: 100em;
+   // margin: 0 auto;
+    
+    article.multiColumn{
+        column-count: 2;
+        -webkit-column-count:2; //Chrome, Safari, Opera
+        -moz-column-count:2;//Firefox
+        
+        column-rule: 1px solid $secondaryColor;
+        -webkit-column-rule: 1px solid $secondaryColor; //Chrome, Safari, Opera
+        -moz-column-rule: 1px solid $secondaryColor; //Firefox
+        
+        
+        column-gap: $gutter;
+        -webkit-column-gap: $gutter; //Chrome, Safari, Opera
+        -moz-column-gap: $gutter; //Firefox
+    }//END OF RECIPES 
+    
+    /*CONTACTS*/
+    form.contactForm{
+        width: 70%;
+        margin: 1.5rem auto;
+        max-height: 76%;
+        border-radius: 1rem;
+    }
+    
+}// END OF MAIN
+

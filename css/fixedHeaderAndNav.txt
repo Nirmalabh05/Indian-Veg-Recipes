@@ -1,0 +1,16 @@
+
+//for fixed header and nav
+
+header{
+	position: fixed;
+    top: auto;
+    width: 100%;
+}
+
+nav{
+	position: fixed;
+    top:5.15rem;
+    width: 100%;
+}
+
+
