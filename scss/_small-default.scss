@@ -15,108 +15,78 @@ html{
 body{
     font-family: $defaultFont;
     font-weight: $normalWeight;
+    width: 100%;
+    background-image: url(../images/back1.jpeg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
 }
-// END OF BODY
 
+// END OF BODY
+div#wrapper{
+    background-color: rgba(255,255,255,0.5); 
+    width: 100%;
+    height: auto;
+}
 /*---------------HEADER-----------*/
 header{
-    background-color: $primaryColor;
-    color: $secondaryColor;
+    position: relative;
     padding: 1rem $gutter;
-    
-    
-    form {float:right;}
-    form input {
-        width: 8rem;
-        border-radius: 10px;
-        margin-right:2%;
-        padding: .2rem;
-        border: none;    
-        transition: width .5s;
-    }
-    form input:focus{width:10rem;}
     a{
         text-decoration: none;
     }
     a h1{
-        font-size: 2rem;
+        font-size: 2.2rem;
         font-weight: $normalWeight;
-        color: $secondaryColor;
+        color: $headerTextColor;
     }
     a h2{
-        font-size: 1.15rem;
+        font-size: 1.35rem;
         font-weight: $normalWeight;
-        color: $secondaryColor;
+        color: #f44253;
     }
-}// END OF HEADER
-
-/*---------------NAVIGATION-----------*/
-nav{
-    
-    background-color: $secondaryColor;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.3);
-    
-    ul{
-        padding: 1rem 0;
+    ul.menu{
+        position: absolute;
+        left: 8px;
+        top: 100px; 
+        float: right;
     }
+    
     ul li{
-        margin: 0 $gutter;
+        width: auto;
+        margin: 0;
         float: left;
-        width: 46%;
-        
+        list-style-type: none;
     }
-    
     ul li a{
         display: block;
         text-align: center;
-        font-weight: $boldWeight;
         font-size: 1.2rem;
-        padding: .5rem 0;
-        color: darken($primaryColor, 20%);
+        padding: 0.6rem;
+        border-right: 1px solid rgba(0, 0, 0, 0.3);
         text-decoration: none;
-        background-color: darken($secondaryColor, 10%);
-            //rgba(0,0,0,0.15);
-        margin: .2rem 0;
-        border-radius: 1rem;
-        //box-shadow: 1px 1px 4px #000;
-        transition: background 0.7s ease, color 0.7s ease;
+        color: black;
     }
+//    ul li a:last-child{border-right: none;}
     ul li.active a{
-        background-color: darken($secondaryColor, 20%);
+        background-color: $headerTextColor;
+        color: white;
     }
     ul li a:hover{
-        color: $secondaryColor;
-        background-color: $primaryColor;
+        color: white;
+        background-color: limegreen;
     }
-    //DROPDOWN
-   
-    .dropdown{
-        float: left;
-        overflow: hidden;
-        //background: $secondaryColor;
-    }
-    
-    
-    
-}// END OF NAVIGATION
+}// END OF HEADER
 
 /*---------------MAIN-----------*/
-
-/*INDEX*/
 main{
-    div.mySlider{
-        height: auto;
+    section#slideshow{
+        margin-top: 20px;
+        margin-bottom: 90px;
     }
-    div.mySlider div{
-        width: 100%;
-    }
-    div.mySlider div img{
-        width: 100%;
-    }
-    
     h1{
         font-size: 2rem;
-        margin: 1rem 0 0 $gutter;
+        margin: 150px 0 5px $gutter;
         color: $primaryColor;
     }
     h2{
@@ -126,7 +96,7 @@ main{
         margin: 0 $gutter;
     }
     hr.fadeAway{
-        background: linear-gradient(to right, rgba(211,45,237,1) 0%,rgba(211,45,237,0.99) 1%,rgba(211,45,237,0.01) 100%); 
+        background: linear-gradient(to right, #008000, #299724, #43af3f, #5ac758, #71e071); 
         height: 2px;
         border: none;
         margin: 0 $gutter;
@@ -138,8 +108,8 @@ main{
     div.aboutText p{
         margin: 1.5rem 0;
         font-size: 1.5rem;
-        text-align: center;
-        font-family: cursive;
+        font-family: $textFont;
+        text-align: left;
         color: $fontColor;
         line-height: normal;
     }
@@ -155,14 +125,14 @@ main{
     figure.photo img{
         width: 100%;
     }
-    
     figure.photo img:hover{
-        box-shadow: 0 0 10px #000000;
+        box-shadow: 0 0 20px #000000;
     }
     figure.photo figcaption{
         text-align: center;
         color: $primaryColor;
         padding-top: .5rem;
+        font-size: 1.3rem;
         font-weight: $boldWeight;
     }
     figure.photo figcaption:hover{
@@ -183,19 +153,22 @@ main{
         margin: $gutter;
         color: $fontColor;
         font-size: 1.25rem;
-        font-family: cursive;
-        line-height: normal;
+        font-family: $textFont;
+        line-height: 1.8rem;
+    }
+    article.multiColumn h2{
+        font-size: 1.5rem;
     }
     article.multiColumn ol{
         margin: .5rem $gutter;
     }
     article.multiColumn ol li{
-        
         color: $fontColor;
+        font-family: $textFont;
         font-size: 1rem;
         font-weight: $normalWeight;
-       
-        padding: $gutter;
+        padding: 1px $gutter;
+        line-height: 1.5rem;
     }
      /*END OF RECIPES
     
@@ -203,8 +176,8 @@ main{
     form.contactForm{
         height: 100%;
         margin: 1rem $gutter;
-        background-color: $secondaryColor;
-        color: $primaryColor;
+        background-color: $primaryColor;
+        color: #ffffff;
         padding: $gutter;
         text-align: center;
         label{
@@ -225,8 +198,8 @@ main{
             min-height: 30%;
         }
         input[type=submit] {
-            background-color: $primaryColor;
-            color: $secondaryColor;
+            background-color: $secondaryColor;
+            color: $primaryColor;
             padding:1rem 2rem;
             border: none;
             border-radius: 4px;
@@ -234,7 +207,7 @@ main{
         }
         input[type=submit]:hover{
             background-color: darken($secondaryColor, 20%);
-            color: white;
+            color: #ffffff;
         }
     }
     
@@ -243,17 +216,18 @@ main{
 
 /*---------------FOOTER-----------*/
 footer{
+    margin-top: 5%;
     width: 100%;
-    background-color: $primaryColor;
+    background-color: $headerTextColor;
     
     p{
         text-align: center;
-        color: $secondaryColor;
+        color: white;
         padding: .5rem;
         font-size: .9rem;
     }
     p a{
-        color: $secondaryColor;
+        color: white;
         text-decoration: none;
     }
 }// END OF FOOTER

@@ -1,25 +1,16 @@
-/*-----------NAVIGATION------------*/
-nav ul{
-    padding: 0;
-    margin-left: $gutter;
-    border-left: 1px solid rgba(0, 0, 0, 0.3);
-}
-nav ul li{
-    width: auto;
-    margin: 0;
-}
-nav ul li a{
-    /* remove phone effects */
-    margin: 0;
-    background-color: transparent;
-    border-radius: 0;
-    box-shadow: 0 0 0;
-    
-    /* add tablet effects */
-    padding: 0.5rem 1.5rem;
-    font-size: 1rem;
-    border-right: 1px solid rgba(0, 0, 0, 0.3);
-}
+
+
+/*------------------HEADER--------------*/
+header{
+    position: relative;
+    ul.menu{
+        position: absolute;
+        left: 55%;
+        top: 10%; 
+        float: right;
+    }
+}// END OF HEADER
+
 /*-----------MAIN------------*/
 /*INDEX*/
 main{
